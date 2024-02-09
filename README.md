@@ -2,7 +2,7 @@
 
 Welcome to RandomForestImplementation, where magic meets code! ✨ This repository showcases the wizardry of implementing a Random Forest model entirely from scratch.
 
-![Random Forest](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*UkBpSVPcK3jQ8Tzv.png)
+![Random Forest](https://miro.medium.com/v2/resize:fit:600/format:webp/0*UkBpSVPcK3jQ8Tzv.png)
 
 ## 🌲 What's Inside?
 - A handcrafted Random Forest model: Dive into the heart of machine learning as we build the Random Forest from the ground up.
