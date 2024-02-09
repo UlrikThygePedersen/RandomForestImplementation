@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.metrics import accuracy_score
 from sklearn.ensemble import RandomForestClassifier
 
-from classes import DecisionTree, Node, RandomForest
+from versions import DecisionTree, RandomForest
 
 # Set seed for reproducibility
 np.random.seed(0)

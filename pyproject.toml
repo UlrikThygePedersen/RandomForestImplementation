@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "randomforestimplementation"
+version = "0.1.0"
+description = ""
+authors = ["Ulrik Pedersen <ulriktpedersen@nttdata.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.2.0"
+numpy = "^1.26.4"
+scikit-learn = "^1.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
