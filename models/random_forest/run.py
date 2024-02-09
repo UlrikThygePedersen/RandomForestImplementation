@@ -16,7 +16,8 @@ npc = partial(np.random.choice, a=[0,1], size=1)
 # Use this function for a detailed look at decision tree formation
 def gen_df(n: int) -> pd.DataFrame:
     labels = np.random.choice([0,1], n)
-    return pd.DataFrame({
+
+    generated_df = pd.DataFrame({
         'strong_continuous': [npn(3)[0] if x else npn(0)[0] for x in labels],
         'weak_continuous': [npn(1)[0] if x else npn(0)[0] for x in labels],
         'strong_categorical': [
@@ -26,13 +27,11 @@ def gen_df(n: int) -> pd.DataFrame:
         'label': labels
     })
 
-# Use this function for a random forest using many features
-def gen_df_hd(n_rows: int, n_cols: int) -> pd.DataFrame:
-    """
-    Note: actual df has 2*n_cols, since we produce both
-    a continuous and categorical feature for each col.
-    """
+    return generated_df
 
+# Use this function for a random forest using many features
+def gen_df_hd(n_rows: int, 
+              n_cols: int) -> pd.DataFrame:
     labels = np.random.choice([0,1], n_rows)
     d = {'label': labels}
 
@@ -47,7 +46,9 @@ def gen_df_hd(n_rows: int, n_cols: int) -> pd.DataFrame:
             for x in labels
         ]
 
-    return pd.DataFrame(d)
+    generated_hd_df = pd.DataFrame(d)
+
+    return generated_hd_df
 
 # Generate data
 print("Generating train and test data")

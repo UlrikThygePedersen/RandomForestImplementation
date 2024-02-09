@@ -39,7 +39,10 @@ class RandomForest:
         print("Bootstrapping data...")
         bootstrap_dfs = [self._bootstrap() for _ in range(self.n_trees)]
         self.forest = [
-            DecisionTree(bdf, self.target_col, self.feature_select, self.max_depth)
+            DecisionTree(bdf, 
+                         self.target_col, 
+                         self.feature_select, 
+                         self.max_depth)
             for bdf in bootstrap_dfs
         ]
         print("Building trees...")
