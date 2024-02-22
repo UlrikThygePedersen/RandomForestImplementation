@@ -3,31 +3,6 @@ import pandas as pd
 from typing_extensions import Self
 
 class Node:
-    """
-    Node in a decision tree.
-
-    Parameters
-    ----------
-    df : pd.DataFrame
-      The dataframe (or subset) this node holds. Used for training.
-      All columns except target_col are assumed to be features.
-    target_col : str
-      The column in the dataframe with labels. Must be 0s and 1s, with
-      1s being the positive class.
-    pk : float
-      Proportion of node's df that contain the positive class.
-    gini : float
-      The node's Gini impurity.
-    left : Node
-      The left child of the node. None if no child.
-    right : Node
-      The right child of the node. None if no child.
-    feature : str
-      The column in the df whose splitting led to the largest reduction
-      in weighted Gini impurity in the child nodes.
-    threshold : float | int
-      The value of the feature column to split the df.
-    """
     def __init__(
         self,
         df: pd.DataFrame,
